@@ -1,4 +1,48 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
-@import "*";
+ @import "*";
+
+
+ // body { padding-top: 70px; }
+
+//  .navbar-default{
+//   background:transparent;
+//   // background-image:none;
+//   border-color:transparent;
+//   // box-shadow:none;
+// }
+
+// * {
+//   border: 1px solid red;
+// }
+
+.navbar-brand img {
+  height: 100%;
+  display: inline;
+}
+
+.jumbotron {
+  padding-top: 0px;
+  min-height: 600px;
+  // position:relative;
+  background-position: 50%, 50%;
+  // background-attachment: fixed;
+  background-size: cover;
+  background-image: image-url("surfcow.jpg");
+  align-items: center;
+  h1 {
+    // margin: 0px auto;
+    color: white;
+    font-weight: 400;
+    // position: relative;
+
+  }
+}
+
+.navbar-fixed-top {
+  background-position: 50%, 50%;
+  background-image: image-url("surfcow.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
