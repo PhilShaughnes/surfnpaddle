@@ -28,7 +28,7 @@ def new_photo_url(users)
   print "\nUpdating NULL avatar (Note: empty strings will not be updated): "
   users.each do |user|
     print '.'
-    user.photo ||= Faker::Avatar.image
+    user.photo = Faker::Avatar.image
     user.save
   end
 end
@@ -58,5 +58,5 @@ print "starting..."
 # this runs new_users if there are less than 5 users in the database.
 userslist = User.all.length < 5 ? new_users : User.all
 new_posts(userslist)
-# new_photo_url(userslist)
+new_photo_url(userslist)
 puts "\nDone."

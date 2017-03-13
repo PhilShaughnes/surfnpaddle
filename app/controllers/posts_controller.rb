@@ -7,8 +7,7 @@ class PostsController < ApplicationController
     @post = if params[:id]
       Post.find(params[:id])
     else
-      Post.order("created_at").last #is the created_at necessary?
-      "most recent post"
+      Post.first#is the created_at necessary?
     end
   end
 

@@ -2,6 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// p {
-//   font-size: 34px;
-// }
+.author {
+  img {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(157, 157, 157);
+  }
+  .media-body {
+    padding: 1% 0;
+    font-size: 11px;
+  }
+}
+
+.aside {
+  .img-circle {
+    max-width: 50%;
+    max-width: 50%;
+    background-color: rgb(157, 157, 157);
+  }
+}
+
+.add {
+  img {
+     position: relative;
+     width: 100%;
+  }
+}
+
+.social {
+  a.btn:before {
+    content:"\e111";
+    border-right: 1px solid;
+    padding-right: 5px;
+    margin-right: 5px;
+  }
+}
