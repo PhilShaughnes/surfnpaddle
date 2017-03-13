@@ -83,3 +83,20 @@ body {
      background-color: rgba(0, 0, 0, 0.3);
   }
 }
+
+
+footer {
+  background-color: rgb(4, 49, 102);
+  color: white;
+  img {
+    display: inline;
+    height: 50px;
+    width: 50px;
+  }
+  .col-sm-6 {
+    padding: 20px;
+    p {
+      padding-top: 20px;
+    }
+  }
+}

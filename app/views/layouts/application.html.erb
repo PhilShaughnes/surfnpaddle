@@ -28,23 +28,30 @@
   </div>
 
 
-  <footer class="container">
-    <div class="col-sm-6">
-      <div class="media">
-        <%= image_tag Faker::LoremPixel.image("100x100", false, 'people'), class: "media-left media-object img-circle" %>
-        <div class="media-body">
-          <p>The Iron yard.</p>
+  <footer>
+    <div class="container">
+      <div class="col-sm-6">
+        <div class="media">
+
+          <div class="media-left">
+            <%= image_tag "tiy-logo.png", class: "media-object" %>
+          </div>
+
+          <div class="media-body">
+            <p>The Iron yard.</p>
+          </div>
+
         </div>
       </div>
-    </div>
 
-    <div class="col-sm-6">
-      <p class="text-right">
-        <%=link_to "Nav Item 1", "#"%>
-        | <%=link_to "Nav Item 1", "#"%>
-        | <%=link_to "Nav Item 1", "#"%>
-        | <%=link_to "Nav Item 1", "#"%>
-      </p>
+      <div class="col-sm-6">
+        <p class="text-right">
+          <%=link_to "Nav Item 1", "#"%>
+          | <%=link_to "Nav Item 1", "#"%>
+          | <%=link_to "Nav Item 1", "#"%>
+          | <%=link_to "Nav Item 1", "#"%>
+        </p>
+      </div>
     </div>
   </footer>
 
