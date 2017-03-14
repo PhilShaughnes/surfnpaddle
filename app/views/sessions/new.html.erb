@@ -1,0 +1,7 @@
+<h1>Please Sign In:</h1>
+
+<%= simple_form_for :session do |f|%>
+  <%= f.input :name %>
+  <%= f.input :password%>
+  <%= f.button :submit, "Login", class: "btn btn-primary"%>
+<% end %>
