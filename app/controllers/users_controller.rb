@@ -46,4 +46,9 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :bio, :photo)
   end
 
+  # def require_self
+  #   unless @user == current_user
+  #     flash[:danger] = ""
+  #   end
+  # end
 end
