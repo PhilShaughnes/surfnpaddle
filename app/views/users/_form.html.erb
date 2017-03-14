@@ -1,0 +1,29 @@
+<% if @user.errors.any? %>
+  <div class="bg-danger col-xs-12">
+    <ul class="list-unstyled">
+      <% @user.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :photo %>
+    <%= f.text_field :photo %>
+  </div>
+  <div>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
+  <div>
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

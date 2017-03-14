@@ -3,19 +3,6 @@
  @import "bootstrap";
  @import "*";
 
-
- // body { padding-top: 70px; }
-
-//  .navbar-default{
-//   background:transparent;
-//   // background-image:none;
-//   border-color:transparent;
-//   // box-shadow:none;
-// }
-
-// * {
-//   border: 1px solid red;
-// }
 body {
    font-family: Helvetica, sans-serif;
  }
@@ -29,12 +16,12 @@ body {
 
 .jumbotron {
   padding-top: 0px;
-  min-height: 500px;
+  height: 40vw;
   background-position: 50%, 50%;
 
   background-size: cover;
   background-image: image-url("surfcow.jpg");
-  box-shadow: inset 0 0 0 1000px rgba(4, 106, 213, 0.6);
+  box-shadow: inset 0 0 0 1000px rgba(99, 159, 158, 0.65);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -42,6 +29,12 @@ body {
   h1 {
     color: white;
     font-weight: 400;
+  }
+  p {
+    color: rgb(50, 50, 50);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
   }
   .container {
     position: absolute;
@@ -86,8 +79,13 @@ body {
 
 
 footer {
-  background-color: rgb(4, 49, 102);
-  color: white;
+  background-color: rgb(38, 55, 69);
+  color: rgb(176, 176, 176);
+  a {
+    color: inherit;
+    font-weight: 300;
+    font-size: 12px;
+  }
   img {
     display: inline;
     height: 50px;
@@ -95,6 +93,7 @@ footer {
   }
   .col-sm-6 {
     padding: 20px;
+    color: white;
     p {
       padding-top: 20px;
     }
