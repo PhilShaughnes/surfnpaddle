@@ -14,7 +14,7 @@ def new_users
     print '.'
     user = User.create!(
       name: "#{Faker::Superhero.descriptor} #{Faker::Superhero.suffix}",
-      photo: Faker::LoremPixel.image("100x100", false, 'people') ,
+      photo: Faker::LoremPixel.image("100x100", false, 'people', users.length+1) ,
       bio: Faker::StarWars.quote
     )
     users << user
@@ -28,7 +28,7 @@ def new_photo_url(users)
   print "\nUpdating NULL avatar (Note: empty strings will not be updated): "
   users.each do |user|
     print '.'
-    user.photo = Faker::Avatar.image
+    user.photo = Faker::Avatar.image(user.name, "100x100")
     user.save
   end
 end
@@ -42,7 +42,7 @@ def new_posts(users)
       user.posts.create!(
         title: Faker::Beer.name,
         body: Faker::Hipster.paragraphs(4).join("\n\n"),
-        photo: Faker::LoremPixel.image("400x400", false, 'transport'),
+        photo: Faker::LoremPixel.image("400x400", false, 'transport', rand(1..10)),
         summary: Faker::HarryPotter.quote,
         created_at: rand(1...300).days.ago
       )

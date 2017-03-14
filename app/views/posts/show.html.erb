@@ -15,15 +15,20 @@
 
     <div class="postbody">
 
-      <blockquote>
-        <%= @post.summary %>
-      </blockquote>
+    <% unless @post.summary.empty? %>
+      <blockquote><%= @post.summary %></blockquote>
+    <% end %>
 
       <%=simple_format @post.body %>
     </div>
 
     <div class="social">
       <ul class="list-inline ">
+        <li>
+          <%= link_to edit_post_path(@post), class: "btn btn-default" do%>
+            Edit Post
+          <% end %>
+        </li>
         <li>
           <%= link_to "read comments", "#", class: "btn btn-default" %>
         </li>
@@ -59,7 +64,7 @@
       <div class="add col-sm-12 col-xs-4">
         <%= link_to 'http://www.thebestdinosaur.com/' do%>
           <%= image_tag("add#{rand(1..6)}.jpg")%>
-          <p class="text-right">About This Add.</p>
+          <p class="text-right">About This Ad.</p>
         <% end %>
 
       </div>
