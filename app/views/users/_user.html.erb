@@ -9,6 +9,7 @@
       <h2 class="media-heading"><%=link_to user.name, user %></h2>
       <p><%= user.bio %></p>
       <%= link_to "Edit", edit_user_path(user), class: "btn btn-default btn-sm" %>
+      <%= link_to "Posts", user_posts_path(user), class: "btn btn-default btn-sm" %>
     </div>
   </div>
 

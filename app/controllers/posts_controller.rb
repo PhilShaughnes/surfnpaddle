@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit]
 
   def index
-    @posts = Post.all
+    p params
+    @posts = params[:user_id] ? User.find(params[:user_id] ).posts.page(params[:page]) : Post.page(params[:page])
   end
 
   def show
