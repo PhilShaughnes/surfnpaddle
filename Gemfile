@@ -42,6 +42,7 @@ gem 'faker'
 
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'simple_form'
 
 
 group :development, :test do
