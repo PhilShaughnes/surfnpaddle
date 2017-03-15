@@ -1,4 +1,4 @@
-<div class="col-lg-4 col-sm-6 postindex">
+<div class="col-md-6 postindex">
 
   <div class="media">
     <div class="media-left media-middle">
@@ -8,7 +8,9 @@
     <div class="media-body">
       <h2 class="media-heading"><%=link_to post.title, post %></h2>
       <p><%= post.summary %></p>
-      <%= link_to "Edit", edit_post_path(post), class: "btn btn-default btn-sm" %>
+      <% if post.is_owner?(current_user) %>
+        <%= link_to "Edit", edit_post_path(post), class: "btn btn-default btn-sm" %>
+      <% end %>
     </div>
   </div>
 

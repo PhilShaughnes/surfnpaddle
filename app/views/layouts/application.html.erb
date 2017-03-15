@@ -15,6 +15,13 @@
     </div> <!-- /. container-->
     <h1 class="text-center text-uppercase">Surfing Cattle Co.</h1>
     <p class="text-center">COW-Abunga!</p>
+
+      <% flash.each do |k,v|%>
+        <div class="alert alert-<%= k %>" role="alert">
+          <h3><%= v %></h3>
+        </div>
+      <% end if flash.any? %>
+
   </div>
 
   <div class="container">
