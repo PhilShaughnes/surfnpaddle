@@ -10,4 +10,8 @@ class Post < ApplicationRecord
     where.not(id: post)
   end
 
+  def is_owner?(other_user)
+    user == other_user
+  end
+
 end

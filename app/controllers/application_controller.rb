@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def require_user
     unless current_user
       flash[:warning] = "Login first!"
-      redirect_to :login_path
+      redirect_to :login
     end
   end
 end

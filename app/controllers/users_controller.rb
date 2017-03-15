@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :find_user, only: [:show, :edit]
+  before_action :require_user, only: [:edit, :update]
 
   def index
     @users = User.order(:name)
@@ -19,6 +20,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      UserMailer.signup(@user).deliver
       session[:user_id] = @user.id
       redirect_to @user
     else
