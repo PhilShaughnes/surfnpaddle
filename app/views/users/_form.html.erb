@@ -15,12 +15,13 @@
   <%= simple_form_for @user do |f| %>
     <div class="col-sm-4">
       <%= f.input :name %>
+      <%= f.input :email %>
       <%= f.input :photo %>
       <%= f.input :password %>
 
     </div>
     <div class="col-sm-8">
-      <%= f.input :bio, as: :text, input_html: {rows: 6}%>
+      <%= f.input :bio, as: :text, input_html: {rows: 10}%>
     </div>
     <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
