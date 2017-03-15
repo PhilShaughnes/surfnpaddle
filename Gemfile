@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -42,6 +42,7 @@ gem 'faker'
 
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'simple_form'
 
 
 group :development, :test do

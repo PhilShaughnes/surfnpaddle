@@ -10,28 +10,19 @@
   </div>
 <% end %>
 
-<%= form_for @user, class: "form_horizontal" do |f| %>
-  <div class="row">
-    <div class="col-sm-4 form-horizontal">
-      <div class="form-group">
-        <%= f.label :name %>
-        <%= f.text_field :name, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :photo %>
-        <%= f.text_field :photo, class: "form-control" %>
-      </div>
-    </div>
 
+<div class="row">
+  <%= simple_form_for @user do |f| %>
+    <div class="col-sm-4">
+      <%= f.input :name %>
+      <%= f.input :email %>
+      <%= f.input :photo %>
+      <%= f.input :password %>
+
+    </div>
     <div class="col-sm-8">
-      <div>
-        <%= f.label :bio %>
-        <%= f.text_area :bio, class: "form-control", rows: 6 %>
-      </div>
+      <%= f.input :bio, as: :text, input_html: {rows: 10}%>
     </div>
-  </div>
-
-  <div>
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
-<% end %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>
