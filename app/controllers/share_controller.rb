@@ -4,7 +4,9 @@ class ShareController < ApplicationController
 
   def create
     flash[:success] = "shared!"
-    UserMailer.share(@post, share_params).deliver
+    puts share_params[:email]
+    p share_params[:email]
+    UserMailer.share(@post, share_params[:email]).deliver
     redirect_to @post
   end
 
