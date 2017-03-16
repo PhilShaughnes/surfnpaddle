@@ -1,0 +1,6 @@
+<div>
+  <%= simple_form_for :share, url: share_path do |f| %>
+    <%= f.input :email, as: :string %>
+    <%= f.button :submit, "send!", class: "btn btn-primary" %>
+  <% end %>
+</div>
