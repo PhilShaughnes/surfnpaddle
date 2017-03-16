@@ -1,0 +1,7 @@
+<h1 style="padding 10px">@post.title</h1>
+
+<%= image_tag @post.pic %>
+
+<h3>By <%=@post.user.name%></h3>
+<blockquote><%= @post.summary %></blockquote>
+<%= simple_format @post.body %>

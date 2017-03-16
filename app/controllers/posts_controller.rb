@@ -48,4 +48,5 @@ end
     params.require(:post).permit(:title, :summary, :body, :photo, :img)
   end
 
+
 end

@@ -26,6 +26,8 @@ class Post < ApplicationRecord
     end
   end
 
+  private
+
   def img_present
     unless img? || !photo.blank?
       errors.add(:img, "must exist if photo doesn't")
